@@ -8,6 +8,11 @@ var TodoSearch = React.createClass({
         }
     },
 
+    propTypes: {
+        onSearch: React.PropTypes.func.isRequired,
+
+    },
+    
     onSearchChanged: function() {
         var { showCompleted, searchField } = this.refs;
         
