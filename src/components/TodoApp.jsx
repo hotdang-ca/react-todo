@@ -9,7 +9,7 @@ var TodoApp = React.createClass({
         return {
             showCompleted: false,
             searchText: '',
-            
+
             todos: [
                 {
                     id: 1,
@@ -32,7 +32,9 @@ var TodoApp = React.createClass({
     },
 
     handleAddTodo: function(text) {
-        
+        this.setState({
+           todos: [...this.state.todos, {id: this.state.todos[this.state.todos.length -1].id + 1, text: text}] 
+        });
     },
     
     handleSearch: function(showCompleted, searchText) {
