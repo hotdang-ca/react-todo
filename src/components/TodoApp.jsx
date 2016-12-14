@@ -2,8 +2,9 @@ var React = require('react');
 var uuid = require('node-uuid');
 var moment = require('moment');
 
-var TodoList = require('TodoList');
-var AddTodo = require('AddTodo');
+import TodoList from 'TodoList';
+import AddTodo from 'AddTodo';
+
 var TodoSearch = require('TodoSearch');
 var TodoAPI = require('TodoAPI');
 
@@ -52,7 +53,7 @@ var TodoApp = React.createClass({
                         <div className="container">
                             <TodoSearch onSearch={this.handleSearch} />
                             <TodoList />
-                            <AddTodo onTodoAdded={this.handleAddTodo} />
+                            <AddTodo onAddTodo={this.handleAddTodo} />
                         </div>
                     </div>
                 </div>
@@ -60,8 +61,5 @@ var TodoApp = React.createClass({
         );
     }
 });
-
-/*
- */
 
 module.exports = TodoApp;

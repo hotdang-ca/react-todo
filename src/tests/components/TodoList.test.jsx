@@ -4,8 +4,8 @@ var ReactDOM = require('react-dom');
 var $ = require('jQuery');
 var TestUtils = require('react-addons-test-utils');
 
+import ConnectedTodoList, { TodoList } from 'TodoList';
 var Todo = require('Todo');
-var TodoList = require('TodoList');
 
 describe('TodoList Component', () => {
   it('should exist', () => {
