@@ -29,6 +29,7 @@ module.exports = {
     ],
     alias: {
       applicationStyles:  'src/styles/app.scss',
+      actions: 'src/redux/actions/actions.jsx',
       // ..
     },
     extensions: ['', '.js', '.jsx']
@@ -38,7 +39,7 @@ module.exports = {
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
